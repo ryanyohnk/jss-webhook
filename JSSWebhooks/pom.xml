@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ryanyohnk</groupId>
+	<artifactId>JSSWebhooks</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- We have to reference local JARS since JAMF's internal Maven repo is 
+		private -->
+	<dependencies>
+		<dependency>
+			<groupId>JAMFEventNotificationMonitor-9.81-javadoc</groupId>
+			<artifactId>JAMFEventNotificationMonitor-9.81-javadoc</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/JAMFEventNotificationMonitor-9.81-javadoc.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>JAMFEventNotificationMonitor-9.81</groupId>
+			<artifactId>JAMFEventNotificationMonitor-9.81</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/JAMFEventNotificationMonitor-9.81.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>fluent-hc</artifactId>
+			<version>4.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.5</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>central</id>
+			<name>Maven repository</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+	</repositories>
+
+</project>
